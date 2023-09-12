@@ -35,10 +35,10 @@ stages:
             ensureBackend: true
             backendAzureRmResourceGroupName: 'Capstonedemoniaz1'
             backendAzureRmResourceGroupLocation: 'Canada Central '
-            backendAzureRmStorageAccountName: 'tstatestorageniaz'
+            backendAzureRmStorageAccountName: 'infrarepo23tfstatefile'
             backendAzureRmStorageAccountSku: 'Standard_LRS'
-            backendAzureRmContainerName: 'capstonetfstatefile'
-            backendAzureRmKey: 'terraform-custom-vnet.tfstate'
+            backendAzureRmContainerName: 'tfstatefileinfraniaz23'
+            backendAzureRmKey: 'niaz-terraform-custom-vnet.tfstate'
             allowTelemetryCollection: false
         - task: TerraformCLI@0
           displayName: Terraform Validate
