@@ -68,6 +68,7 @@ stages:
                 workingDirectory: '$(Pipeline.Workspace)/'
                 backendType: 'azurerm'
                 backendServiceArm: 'terraform-aks-azurerm-svc-con'
+                backendAzureRmSubscriptionId: '606e824b-aaf7-4b4e-9057-b459f6a4436d'
                 ensureBackend: true
                 backendAzureRmResourceGroupName: 'Capstonedemoniaz1'
                 backendAzureRmResourceGroupLocation: 'East US'
