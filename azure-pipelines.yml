@@ -34,11 +34,7 @@ stages:
             backendAzureRmSubscriptionId: '606e824b-aaf7-4b4e-9057-b459f6a4436d'
             ensureBackend: true
             backendAzureRmResourceGroupName: 'Capstonedemoniaz1'
-<<<<<<< HEAD
             backendAzureRmResourceGroupLocation: 'East Us'
-=======
-            backendAzureRmResourceGroupLocation: 'East US'
->>>>>>> f0bb591daed1eba99012b7581dcd2e9f1bd9437e
             backendAzureRmStorageAccountName: 'infrarepo23tfstatefile'
             backendAzureRmStorageAccountSku: 'Standard_LRS'
             backendAzureRmContainerName: 'tfstatefileinfraniaz23'
