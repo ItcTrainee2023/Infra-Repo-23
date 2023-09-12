@@ -69,10 +69,10 @@ stages:
                 backendType: 'azurerm'
                 backendServiceArm: 'terraform-aks-azurerm-svc-con'
                 ensureBackend: true
-                backendAzureRmResourceGroupName: 'Stefans-Resource-Group'
+                backendAzureRmResourceGroupName: 'Capstonedemoniaz1'
                 backendAzureRmResourceGroupLocation: 'East US'
-                backendAzureRmStorageAccountName: 'tstatestorageniaz'
-                backendAzureRmContainerName: 'capstonetfstatefile'
+                backendAzureRmStorageAccountName: 'infrarepo23tfstatefile'
+                backendAzureRmContainerName: 'tfstatefileinfraniaz23'
                 backendAzureRmKey: 'aks-$(DEV_ENVIRONMENT).tfstate'
                 allowTelemetryCollection: false
             - task: TerraformCLI@0
