@@ -29,9 +29,9 @@ terraform {
 # Terraform State Storage to Azure Storage Container
   backend "azurerm" {
     resource_group_name   = "Capstonedemoniaz1"
-    storage_account_name  = "tstatestorageniaz"
-    container_name        = "capstonetfstatefile"
-    key                   = "terraform-custom-vnet.tfstate"
+    storage_account_name  = "infrarepo23tfstatefile"
+    container_name        = "tfstatefileinfraniaz23"
+    key                   = "niaz-terraform-custom-vnet.tfstate"
   }  
 }
 
