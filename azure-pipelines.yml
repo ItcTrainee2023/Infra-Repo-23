@@ -92,5 +92,5 @@ stages:
                 command: 'apply'
                 workingDirectory: '$(Pipeline.Workspace)/Infra-Repo-Niaz-out'
                 environmentServiceName: 'terraform-aks-azurerm-svc-con'
-                commandOptions: '$(Pipeline.Workspace)/Infra-Repo-Niaz-ou/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
+                commandOptions: '$(Pipeline.Workspace)/Infra-Repo-Niaz-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
                 allowTelemetryCollection: false
