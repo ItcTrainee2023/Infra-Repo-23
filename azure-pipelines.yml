@@ -6,6 +6,9 @@
 trigger:
 - main
 
+pool:
+  vmImage: ubuntu-latest
+
 variables:
   DEV_ENVIRONMENT: dev 
 
@@ -32,11 +35,8 @@ stages:
             backendType: 'azurerm'
             backendServiceArm: 'terraform-aks-azurerm-svc-con'
             backendAzureRmSubscriptionId: '606e824b-aaf7-4b4e-9057-b459f6a4436d'
-            ensureBackend: true
             backendAzureRmResourceGroupName: 'Capstonedemoniaz1'
-            backendAzureRmResourceGroupLocation: 'East Us'
             backendAzureRmStorageAccountName: 'infrarepo23tfstatefile'
-            backendAzureRmStorageAccountSku: 'Standard_LRS'
             backendAzureRmContainerName: 'tfstatefileinfraniaz23'
             backendAzureRmKey: 'niaz-terraform-custom-vnet.tfstate'
             allowTelemetryCollection: false
@@ -46,6 +46,7 @@ stages:
             command: 'validate'
             workingDirectory: '$(System.DefaultWorkingDirectory)/'
             allowTelemetryCollection: false
+
   - stage: DeployAKSClusters
     jobs:
     - deployment: DeployDevAKSCluster
@@ -65,16 +66,17 @@ stages:
             - task: TerraformCLI@0
               inputs:
                 command: 'init'
-                workingDirectory: '$(Pipeline.Workspace)/'
+                workingDirectory: '$(Pipeline.Workspace)/Infra-Repo-Niaz-out'
                 backendType: 'azurerm'
                 backendServiceArm: 'terraform-aks-azurerm-svc-con'
                 backendAzureRmSubscriptionId: '606e824b-aaf7-4b4e-9057-b459f6a4436d'
                 ensureBackend: true
                 backendAzureRmResourceGroupName: 'Capstonedemoniaz1'
-                backendAzureRmResourceGroupLocation: 'East US'
+                backendAzureRmResourceGroupLocation: 'East Us'
                 backendAzureRmStorageAccountName: 'infrarepo23tfstatefile'
+                backendAzureRmStorageAccountSku: 'Standard_LRS'
                 backendAzureRmContainerName: 'tfstatefileinfraniaz23'
-                backendAzureRmKey: 'aks-$(DEV_ENVIRONMENT).tfstate'
+                backendAzureRmKey: 'niaz-terraform-custom-vnet.tfstate'
                 allowTelemetryCollection: false
             - task: TerraformCLI@0
               displayName: Terraform Plan
